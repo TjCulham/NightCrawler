@@ -7,7 +7,7 @@
 extents = Vector2( 27.7599, 112.835 )
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 480.996, 266.985 )
+position = Vector2( 324.996, 417.985 )
 script = ExtResource( 2 )
 gravity = 500.0
 
@@ -16,5 +16,5 @@ position = Vector2( 4.45135, -122.285 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.171845, -133.093 )
+position = Vector2( 4.17184, -115.093 )
 shape = SubResource( 1 )
