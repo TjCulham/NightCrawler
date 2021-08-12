@@ -9,7 +9,7 @@ extents = Vector2( 27.7599, 112.835 )
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 324.996, 417.985 )
 script = ExtResource( 2 )
-gravity = 500.0
+gravity = 1.0
 
 [node name="manTest" type="Sprite" parent="."]
 position = Vector2( 4.45135, -122.285 )
