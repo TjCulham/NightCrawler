@@ -24,6 +24,12 @@ config/name="Night Crawler"
 run/main_scene="res://source/levels/TestLevel.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=2100
+window/size/height=900
+window/size/resizable=false
+
 [input]
 
 moveLeft={
