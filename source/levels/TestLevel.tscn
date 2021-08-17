@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://unknown.png" type="Texture" id=1]
 [ext_resource path="res://source/actors/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://source/actors/enemyTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WIP_BACKGROUND_FOR_NIGHTCRAWLER.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 288, 0, 288, 128, 0, 128 )
@@ -32,6 +33,11 @@ points = PoolVector2Array( 0, 0, 288, 0, 288, 128, 0, 128 )
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="WIP_BACKGROUND_FOR_NIGHTCRAWLER" type="Sprite" parent="."]
+position = Vector2( 524.374, 93.3305 )
+scale = Vector2( 6.66633, 6.66633 )
+texture = ExtResource( 4 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 collision_layer = 8
@@ -44,4 +50,4 @@ position = Vector2( 301.91, 508.199 )
 gravity = 4000.0
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 779.765, 347.504 )
+position = Vector2( 926.599, 509.321 )
