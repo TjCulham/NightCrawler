@@ -1,4 +1,4 @@
-extends "res://source/actors/actors.gd"
+extends Actor
 
 func _ready() -> void:
 	_velocity.x = -speed.x

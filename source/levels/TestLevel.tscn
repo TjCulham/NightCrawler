@@ -37,10 +37,10 @@ tile_set = SubResource( 2 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 65532, 0, 0, 15, 0, 0, 196604, 0, 0, 131087, 0, 0, 327676, 0, 0, 262159, 0, 0, 458748, 0, 0, 393231, 0, 0, 524288, 0, 0, 524292, 0, 0, 524296, 0, 0, 524300, 0, 0 )
+tile_data = PoolIntArray( 589812, 0, 0, 589816, 0, 0, 589820, 0, 0, 524288, 0, 0, 524292, 0, 0, 524296, 0, 0, 524300, 0, 0, 524304, 0, 0, 524308, 0, 0, 524312, 0, 0 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 301.91, 272.998 )
+position = Vector2( 301.91, 508.199 )
 gravity = 4000.0
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
