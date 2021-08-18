@@ -1,23 +1,23 @@
 extends StateMachine
 
-func ready():
+func _ready():
+	print("here")
 	addState("idle")
 	addState("run")
 	addState("jump")
 	addState("fall")
 	call_deferred("setState", states.idle)
 	
-func input(event: InputEvent) -> void:
+func _input(event):
 	# if [states.idle, states.run].has(state): # future TODO
-	if state == states.jump:
-		if event.is_action_pressed("jump") && parent.isGrounded:
-			parent.velocity.y = parent.jumpVelocity
+	
+	if event.is_action_pressed("jump") && parent.isGrounded:
+		parent.velocity.y = parent.jumpVelocity
 
 
 func stateLogic(delta):
-	print("here")
 	parent.handleMoveInput()
-	parent.applyGravity()
+	parent.applyGravity(delta)
 	parent.applyMovement()	
 
 func getTransition(delta):
@@ -53,15 +53,16 @@ func getTransition(delta):
 				
 
 func enterState(newState, oldState):
-	match newState:
-		states.idle:
-			parent.anim_player.play("idle")
-		states.run:
-			parent.anim_player.play("run")
-		states.jump:
-			parent.anim_player.play("jump")
-		states.fall:
-			parent.anim_player.play("fall")
+#	match newState:
+#		states.idle:
+#			parent.anim_player.play("idle")
+#		states.run:
+#			parent.anim_player.play("run")
+#		states.jump:
+#			parent.anim_player.play("jump")
+#		states.fall:
+#			parent.anim_player.play("fall")
+	pass
 	# add animation states TODO
 	
 func exitState(oldState, newState):

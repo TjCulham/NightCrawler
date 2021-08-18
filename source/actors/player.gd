@@ -41,6 +41,7 @@ func getHWeight():
 #	return false # loop completes
 	
 	
+#///////////////////////////////// OLD //////////////////////////
 
 #func _physics_process(delta: float) -> void:
 #	var direction: = getDirection()
