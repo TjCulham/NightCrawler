@@ -66,7 +66,6 @@ texture = ExtResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 376.661, -1.7099 )
-gravity = 4000.0
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1649.13, -79.8684 )
