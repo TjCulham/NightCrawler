@@ -8,7 +8,7 @@ func _ready():
 	addState("fall")
 	call_deferred("setState", states.idle)
 	
-func _input(event):
+func _input(event: InputEvent) -> void:
 	# if [states.idle, states.run].has(state): # future TODO
 	
 	if event.is_action_pressed("jump") && parent.isGrounded:

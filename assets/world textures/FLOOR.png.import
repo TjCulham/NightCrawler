@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemyTest.png-0b74e2dfc6dc6ac9feb1b6729b62d63a.stex"
+path="res://.import/FLOOR.png-4b8a4e71d07156f04611066d068f99b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemyTest.png"
-dest_files=[ "res://.import/enemyTest.png-0b74e2dfc6dc6ac9feb1b6729b62d63a.stex" ]
+source_file="res://assets/world textures/FLOOR.png"
+dest_files=[ "res://.import/FLOOR.png-4b8a4e71d07156f04611066d068f99b2.stex" ]
 
 [params]
 
