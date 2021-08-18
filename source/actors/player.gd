@@ -6,25 +6,24 @@ const SLOPE_STOP = 64
 
 var velocity = Vector2()
 var moveSpeed= 5 * 96
-var gravity = 1200
+var gravity = 2000
 var jumpVelocity = -720
 var isGrounded
 
-onready var raycasts = $Raycasts
+# onready var raycasts = $Raycasts
 
-func _physics_process(delta: float) -> void:
-	getInput()
+
+func applyGravity(delta):	
 	velocity.y += gravity * delta
+	
+func applyMovement():
 	
 	velocity = move_and_slide(velocity, UP, SLOPE_STOP)
 	
 	isGrounded = is_on_floor() # raycasts TODO /////////////////////////////////////
-	
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump") && isGrounded:
-		velocity.y = jumpVelocity
 
-func getInput():
+
+func handleMoveInput():
 	var moveDirection = -int(Input.is_action_pressed("moveLeft")) + int(Input.is_action_pressed("moveRight"))
 	velocity.x = lerp(velocity.x, moveSpeed * moveDirection, getHWeight())
 	if moveDirection != 0:
@@ -41,16 +40,6 @@ func getHWeight():
 #
 #	return false # loop completes
 	
-#func assignAnimation():
-#	var anim = "idle"
-#
-#	if isGrounded:
-#		anim = "jump"
-#	elif velocity.x != 0:
-#		anim = "run"
-#
-#	if anim_player.assigned_animation != anim:
-#		anim_player.play(anim)
 	
 
 #func _physics_process(delta: float) -> void:
