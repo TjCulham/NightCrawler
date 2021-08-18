@@ -3,12 +3,14 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const SLOPE_STOP = 64
+const Projectile_PS = preload("res://source/projectiles/testProjectile.tscn")
 
 var velocity = Vector2()
 var moveSpeed= 5 * 96
-var gravity = 2000
+var gravity = 3000
 var jumpVelocity = -720
 var isGrounded
+var heldProjectile = null
 
 # onready var raycasts = $Raycasts
 
@@ -32,6 +34,13 @@ func handleMoveInput():
 func getHWeight():
 	return 0.2 if isGrounded else 0.1
 	
+func spawnProjectile():
+	if heldProjectile == null:
+		heldProjectile = Projectile_PS.instance()
+	
+func shootProjectile():
+	heldProjectile.launch(1)
+	heldProjectile = null
 	
 #func checkIsGrounded(): # implement raycasts /////////////////////////
 #	for raycast in raycasts.get_children():
