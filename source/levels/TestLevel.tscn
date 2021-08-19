@@ -45,7 +45,7 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 2700, 0 )
 
 [node name="Layer 6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 286.047, -307.957 )
+position = Vector2( 286.047, -67.6859 )
 scale = Vector2( 8.507, 8.507 )
 texture = ExtResource( 10 )
 
