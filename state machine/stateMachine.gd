@@ -32,10 +32,12 @@ func setState(newState):
 	
 	if previousState != null:
 		exitState(previousState, newState)
-	elif newState != null:
+	if newState != null:
 		enterState(newState, previousState)
 		
+		
 func addState(stateName):
+	print(stateName)
 	states[stateName] = states.size()
 	
 	

@@ -3,6 +3,8 @@ extends KinematicBody2D
 
 signal groundedUpdated(isGrounded)
 
+onready var animPlayer = $AnimationPlayer
+
 const UP = Vector2(0, -1)
 const SLOPE_STOP = 64
 const Projectile_PS = preload("res://source/projectiles/testProjectile.tscn")

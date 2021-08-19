@@ -1,7 +1,6 @@
 extends StateMachine
 
 func _ready():
-	print("here")
 	addState("idle")
 	addState("run")
 	addState("jump")
@@ -28,17 +27,17 @@ func getTransition(delta):
 			if !parent.is_on_floor():
 				if parent.velocity.y < 0:
 					return states.jump
-				elif parent.velocity.y >= 0:
+				elif parent.velocity.y > 0:
 					return states.fall
 			elif parent.velocity.x != 0:
 				return states.run
-		states.idle:
+		states.run:
 			if !parent.is_on_floor():
 				if parent.velocity.y < 0:
 					return states.jump
 				elif parent.velocity.y >= 0:
 					return states.fall
-			elif parent.velocity.x != 0:
+			elif parent.velocity.x == 0:
 				return states.idle
 		states.jump:
 			if parent.is_on_floor():
@@ -55,10 +54,11 @@ func getTransition(delta):
 				
 
 func enterState(newState, oldState):
+
 	parent.get_node("SMLabel").text = states.keys()[state]
-#	match newState:
-#		states.idle:
-#			parent.anim_player.play("idle")
+	match newState:
+		states.idle:
+			parent.animPlayer.play("idle")
 #		states.run:
 #			parent.anim_player.play("run")
 #		states.jump:
