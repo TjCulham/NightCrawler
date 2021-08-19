@@ -42,7 +42,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 1 )
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 286.047, -67.6859 )
@@ -51,7 +51,7 @@ texture = ExtResource( 10 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.1, 1 )
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 5" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 286.047, -411.784 )
@@ -60,7 +60,7 @@ texture = ExtResource( 9 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 4" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 286.047, -534.682 )
@@ -69,7 +69,7 @@ texture = ExtResource( 12 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 3" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
 position = Vector2( 286.047, -555.871 )
@@ -77,7 +77,7 @@ scale = Vector2( 8.507, 8.507 )
 texture = ExtResource( 8 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 2" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
 position = Vector2( 286.047, -598.25 )
@@ -103,9 +103,9 @@ layer = 1
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="Parallax foreground"]
 motion_scale = Vector2( 2, 1 )
-motion_mirroring = Vector2( 2700, 0 )
+motion_mirroring = Vector2( 2722, 0 )
 
 [node name="Layer 1" type="Sprite" parent="Parallax foreground/ParallaxLayer6"]
-position = Vector2( 291.704, -515.603 )
+position = Vector2( 297.361, -586.314 )
 scale = Vector2( 8.50724, 8.50724 )
 texture = ExtResource( 11 )
