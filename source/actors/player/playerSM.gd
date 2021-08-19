@@ -11,6 +11,7 @@ func _ready():
 func _input(event: InputEvent) -> void:
 	# if [states.idle, states.run].has(state): # future TODO
 	
+	
 	if event.is_action_pressed("jump") && parent.isGrounded:
 		parent.velocity.y = parent.jumpVelocity
 
@@ -19,6 +20,7 @@ func stateLogic(delta):
 	parent.handleMoveInput()
 	parent.applyGravity(delta)
 	parent.applyMovement()	
+	parent.cameraMovement()
 
 func getTransition(delta):
 	match state:

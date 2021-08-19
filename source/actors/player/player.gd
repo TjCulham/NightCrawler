@@ -1,6 +1,8 @@
 #extends Actor
 extends KinematicBody2D
 
+signal groundedUpdated(isGrounded)
+
 const UP = Vector2(0, -1)
 const SLOPE_STOP = 64
 const Projectile_PS = preload("res://source/projectiles/testProjectile.tscn")
@@ -14,6 +16,12 @@ var heldProjectile = null
 
 # onready var raycasts = $Raycasts
 
+func cameraMovement(): #doesnt do much right now
+	var wasGrounded = isGrounded
+	isGrounded = is_on_floor()
+	
+	if wasGrounded == null || isGrounded != wasGrounded:
+		emit_signal("groundedUpdated", isGrounded)
 
 func applyGravity(delta):	
 	velocity.y += gravity * delta
