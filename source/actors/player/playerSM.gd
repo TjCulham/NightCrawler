@@ -59,12 +59,12 @@ func enterState(newState, oldState):
 	match newState:
 		states.idle:
 			parent.animPlayer.play("idle")
-#		states.run:
-#			parent.anim_player.play("run")
+		states.run:
+			parent.animPlayer.play("run")
 #		states.jump:
-#			parent.anim_player.play("jump")
+#			parent.animPlayer.play("jump")
 #		states.fall:
-#			parent.anim_player.play("fall")
+#			parent.animPlayer.play("fall")
 	pass
 	# add animation states TODO
 	
