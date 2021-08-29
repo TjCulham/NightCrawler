@@ -55,9 +55,13 @@ func getTransition(delta):
 
 func enterState(newState, oldState):
 
+	parent.animPlayer.stop()
+	
 	parent.get_node("SMLabel").text = states.keys()[state]
+	
 	match newState:
 		states.idle:
+			#parent.animPlayer.stop()
 			parent.animPlayer.play("idle")
 		states.run:
 			parent.animPlayer.play("run")

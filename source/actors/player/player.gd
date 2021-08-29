@@ -12,7 +12,7 @@ const Projectile_PS = preload("res://source/projectiles/testProjectile.tscn")
 var velocity = Vector2()
 var moveSpeed= 5 * 96
 var gravity = 3000
-var jumpVelocity = -720
+var jumpVelocity = -1000
 var isGrounded
 var heldProjectile = null
 
